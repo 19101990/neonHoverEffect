@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap');
+
+:root {
+  --btn-color: rgb(124, 255, 1);
+}
+
+* {
+  box-sizing: border-box; /* when we add any border or padding to an element it won't affect it's width */
+}
+
+body {
+  font-family: 'Jura', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgb(24, 22, 22);
+}
+
+.neon-btn {
+  font-size: 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--btn-color);
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  letter-spacing: 5px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.neon-btn:hover {
+  color: rgb(24, 22, 22);
+  background: var(--btn-color);
+  box-shadow: 0 0 10px var(--btn-color), 0 0 30px var(--btn-color),
+    0 0 90px var(--btn-color);
+  transition-delay: 1s;
+}
+
+.neon-btn span {
+  position: absolute;
+  display: block;
+}
+
+.neon-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--btn-color));
+}
+
+.neon-btn:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.neon-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--btn-color));
+}
+
+.neon-btn:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.neon-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--btn-color));
+}
+
+.neon-btn:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.neon-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--btn-color));
+}
+
+.neon-btn:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
